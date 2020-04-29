@@ -1,0 +1,17 @@
+---
+title: "2_explore_tweets"
+author: "Marcel"
+date: "29 4 2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+
+files <- list.files(path = "data/", pattern = "charge", full.names = TRUE)
+
+data <- map(files, ~ readRDS(.x)) %>%
+  bind_rows() %>% 
+  as_tibble()
+```

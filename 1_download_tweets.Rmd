@@ -1,0 +1,23 @@
+---
+title: "1_download_tweets"
+author: "Marcel"
+date: "29 4 2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(rtweet)
+
+```
+
+```{r first_load}
+
+charge_1 <- rtweet::get_timeline(user = "elhotzo", n = 3200L)
+
+saveRDS(object = charge_1, file = "data/charge_1.RDS")
+
+
+```
