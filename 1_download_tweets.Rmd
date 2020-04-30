@@ -17,9 +17,9 @@ source("R/get_historic_tweets.R", local = TRUE)
 
 ```{r first_load}
 
-charge_1 <- rtweet::get_timeline(user = "elhotzo", n = 3200L)
-
-saveRDS(object = charge_1, file = "data/charge_1.RDS")
+# charge_1 <- rtweet::get_timeline(user = "elhotzo", n = 3200L)
+# 
+# saveRDS(object = charge_1, file = "data/charge_1.RDS")
 
 ```
 
